@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: testnodejs0128a-gitops
+  description: This is GitOps manifest for testnodejs0128a   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: testnodejs0128a
+    backstage.io/kubernetes-id: testnodejs0128a 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: testnodejs0128a   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:testnodejs0128a
